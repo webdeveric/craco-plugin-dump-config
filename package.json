@@ -1,0 +1,70 @@
+{
+  "name": "craco-plugin-dump-config",
+  "version": "0.0.0",
+  "description": "Dump your config objects to a file",
+  "keywords": [
+    "craco",
+    "craco-plugin",
+    "craco-plugin-dump-config",
+    "create-react-app"
+  ],
+  "author": "Eric King <eric@webdeveric.com>",
+  "license": "MIT",
+  "node": ">=12.20.0",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./index.js": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webdeveric/craco-plugin-dump-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webdeveric/craco-plugin-dump-config/issues"
+  },
+  "homepage": "https://github.com/webdeveric/craco-plugin-dump-config#readme",
+  "scripts": {
+    "dev": "npm run build -- --watch",
+    "clean": "rimraf ./dist",
+    "format": "prettier --write .",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "spellcheck": "cspell './src/**/*.ts' './*.{json,md}'",
+    "lint": "eslint ./src --ext .ts --fix",
+    "prepare": "husky install",
+    "prepublishOnly": "npm run spellcheck && npm run lint && npm run build"
+  },
+  "prettier": "@webdeveric/prettier-config",
+  "lint-staged": {
+    "./src/**/*.ts|./*.{json,md}": [
+      "cspell lint --no-progress --no-summary --no-must-find-files",
+      "prettier --write"
+    ],
+    "./src/**/*.ts": "eslint --cache --fix"
+  },
+  "peerDependencies": {
+    "@craco/craco": "^6.0.0"
+  },
+  "dependencies": {
+    "@webdeveric/craco-plugin": "^0.2.2",
+    "find-cache-dir": "^3.3.1"
+  },
+  "devDependencies": {
+    "@types/find-cache-dir": "^3.2.0",
+    "@webdeveric/eslint-config-ts": "^0.1.2",
+    "@webdeveric/prettier-config": "^0.1.0",
+    "cspell": "^5.4.1",
+    "eslint": "^7.26.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.2.4"
+  }
+}

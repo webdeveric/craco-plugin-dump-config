@@ -1,0 +1,7 @@
+{
+  "version": "0.1",
+  "language": "en",
+  "words": ["craco", "prebuild", "typecheck", "webdeveric"],
+  "flagWords": [],
+  "ignorePaths": ["cspell.json", "package-lock.json", "node_modules/**", "dist/**"]
+}

@@ -1,0 +1,10 @@
+{
+  "root": true,
+  "extends": "@webdeveric/eslint-config-ts",
+  "env": {
+    "browser": false,
+    "es6": true,
+    "mocha": true,
+    "node": true
+  }
+}
