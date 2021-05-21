@@ -1,6 +1,6 @@
 {
   "name": "craco-plugin-dump-config",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Dump your config objects to a file",
   "keywords": [
     "craco",
