@@ -1,6 +1,6 @@
 {
   "root": true,
-  "extends": "@webdeveric/eslint-config-ts",
+  "extends": ["@webdeveric/eslint-config-ts", "eslint-config-prettier"],
   "env": {
     "browser": false,
     "es6": true,

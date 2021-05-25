@@ -1,11 +1,11 @@
 {
-  "name": "craco-plugin-dump-config",
+  "name": "craco-plugin-inspect-config",
   "version": "0.1.0",
-  "description": "Dump your config objects to a file",
+  "description": "Inspect your configuration objects",
   "keywords": [
     "craco",
     "craco-plugin",
-    "craco-plugin-dump-config",
+    "craco-plugin-inspect-config",
     "create-react-app"
   ],
   "author": "Eric King <eric@webdeveric.com>",
@@ -22,12 +22,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/webdeveric/craco-plugin-dump-config.git"
+    "url": "git+https://github.com/webdeveric/craco-plugin-inspect-config.git"
   },
   "bugs": {
-    "url": "https://github.com/webdeveric/craco-plugin-dump-config/issues"
+    "url": "https://github.com/webdeveric/craco-plugin-inspect-config/issues"
   },
-  "homepage": "https://github.com/webdeveric/craco-plugin-dump-config#readme",
+  "homepage": "https://github.com/webdeveric/craco-plugin-inspect-config#readme",
   "scripts": {
     "dev": "npm run build -- --watch",
     "clean": "rimraf ./dist",
@@ -52,6 +52,7 @@
     "@craco/craco": "^6.0.0"
   },
   "dependencies": {
+    "@types/node": "^15.6.1",
     "@webdeveric/craco-plugin": "^0.2.2",
     "find-cache-dir": "^3.3.1"
   },
@@ -60,7 +61,8 @@
     "@webdeveric/eslint-config-ts": "^0.1.2",
     "@webdeveric/prettier-config": "^0.1.0",
     "cspell": "^5.4.1",
-    "eslint": "^7.26.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
     "prettier": "^2.3.0",
